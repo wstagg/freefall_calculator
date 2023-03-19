@@ -13,7 +13,7 @@ int main()
     while (running)
     {
         std::cout << "\n\nPlease choose the object you would like to drop...\
-            \nor enter (q) to quit.\n\n(b) Ball\n(c) Cube\n\nEnter the your choice: " ;
+            \nor enter (q) to quit.\n\n(b) Ball\n\nEnter the your choice: " ;
         
         char start{ get_input_c() };
 

@@ -16,8 +16,6 @@ void ball_drop()
     double drop_height{ get_input_d() };
     double freefall_time{ calculate_free_fall_time(ball_mass, drop_height) };
 
-    //std :: cout << freefall_time << " seconds\n";
-
     std::cout << std::setprecision(4);
 
     std::cout << "\nA ball weighing " << ball_mass << "kg dropped from " <<

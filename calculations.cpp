@@ -7,7 +7,7 @@ const double g{ 9.80665 };   // Gravity (m/s2)
 const double p{ 1.2041 };    // Density of air (kg/m3)
 const double e{ 2.71828 };   // Euler's number (e)
 const double k{ 0.24 };      // Air resistance (kg/m)
-const double pi{ 3.142 };     // Pi
+const double pi{ 3.142 };    // Pi
 
 // Calculate terminal velocity of sphere
 double calculate_terminal_velocity(double mass, double area)
@@ -31,7 +31,7 @@ void calculate_distance_fallen(double height, double fall_time)
     double i{ 0 };
     for (; i < fall_time; ++i)
     {
-        // Free fall time in a vacuum
+        /* Free fall time in a vacuum, this is currently not being used */
         /*double distance {(g * pow(i, 2.0))/2};
          std::cout << std::setprecision(4);
          std::cout << "\nAt " << i << " seconds the ball height is "<< height - distance <<"m\n";*/
