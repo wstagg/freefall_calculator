@@ -1,5 +1,6 @@
 #include <iostream>
 #include "inputs.h"
+#include <SFML/Graphics.hpp>
 
 // Gets input from user (double)
 double get_input_d()
@@ -20,3 +21,5 @@ char get_input_c()
 
     return input_char;
 }
+
+
