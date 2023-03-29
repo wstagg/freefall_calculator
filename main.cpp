@@ -35,11 +35,18 @@ int main()
     menu_ball.setRadius(75);
     menu_ball.setPosition(600, 300);
     menu_ball.setFillColor(sf::Color::Blue);
+    menu_ball.setOutlineColor(sf::Color::White);
+    menu_ball.setOutlineThickness(0.0);
+
+
+
 
     sf::RectangleShape menu_square;
     menu_square.setSize(sf::Vector2f(150.f, 150.f));
     menu_square.setPosition(100, 300);
     menu_square.setFillColor(sf::Color::Red);
+    menu_square.setOutlineColor(sf::Color::White);
+    menu_square.setOutlineThickness(10.0);
     
     
     int next_text{ 0 };
@@ -69,7 +76,13 @@ int main()
                 }
                 if (event.key.code == sf::Keyboard::Right)
                 {
-
+                    menu_ball.setOutlineThickness(10.0);
+                    menu_square.setOutlineThickness(0.0);
+                }
+                if (event.key.code == sf::Keyboard::Left)
+                {
+                    menu_ball.setOutlineThickness(0.0);
+                    menu_square.setOutlineThickness(10.0);
                 }
             }
     
