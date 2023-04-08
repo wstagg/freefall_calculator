@@ -21,12 +21,18 @@ int main()
     {
         std::cout << "Cannot load font file.";
     }
-    sf::Text welcome;
-    welcome.setFont(arial);
+    sf::Text menu_text;
+    menu_text.setFont(arial);
 
     std::vector <std::string> welcome_text;
     welcome_text.push_back("Welcome to Freefall Calculator!");
     welcome_text.push_back("Please choose the object you would like to drop....");
+
+    std::vector <std::string> obj_selection_txt;
+    obj_selection_txt.push_back("Cube selected!");
+    obj_selection_txt.push_back("Ball selected!");
+
+   
 
     int welcome_vec_size = welcome_text.size()-1; 
     int next_text{ 0 }; // Used to iterate through the welcome text vector
@@ -75,12 +81,18 @@ int main()
     menu_ball.setOutlineThickness(0.0);
     menu_ball.setTexture(&concrete);
 
-    sf::RectangleShape menu_square;
-    menu_square.setSize(sf::Vector2f(150.f, 150.f));
-    menu_square.setPosition(200, 300);
-    menu_square.setOutlineColor(sf::Color::White);
-    menu_square.setOutlineThickness(10.0);
-    menu_square.setTexture(&crate);
+    sf::RectangleShape menu_cube;
+    menu_cube.setSize(sf::Vector2f(150.f, 150.f));
+    menu_cube.setPosition(200, 300);
+    menu_cube.setOutlineColor(sf::Color::White);
+    menu_cube.setOutlineThickness(10.0);
+    menu_cube.setTexture(&crate);
+
+    /*---------------------*/
+    /*   Main Objects      */
+    /*---------------------*/
+    int object_chosen {0};
+
     
     /*---------------------*/
     /*   main event loop   */
@@ -102,59 +114,97 @@ int main()
             {
                 if (event.key.code == sf::Keyboard::Space)
                 {
-                    if (next_text < welcome_vec_size)
+                    // This goes up to the object selection menu 
+                    if (next_text < 1) 
                     {
                         ++next_text;
                         std::cout << "next text: " << next_text;
-                    }  
+                    }
+                    // Cube chosen
+                    else if (object_chosen == 0 && next_text == 1)
+                    {
+                            menu_text.setString(obj_selection_txt[0]);
+                            menu_text.setCharacterSize(75);
+                            menu_text.setPosition(250, 0);
+                            menu_cube.setPosition(320, 300);
+                            menu_cube.setScale(2, 2);
+                            menu_cube.setOutlineThickness(0);
+                            ++next_text;
+                    }
+                    // Ball Chosen
+                    else if (object_chosen == 1 && next_text == 1)
+                    {
+                        menu_text.setString(obj_selection_txt[1]);
+                        menu_text.setCharacterSize(75);
+                        menu_text.setPosition(250, 0);
+                        menu_ball.setPosition(320, 300);
+                        menu_ball.setScale(2, 2);
+                        menu_ball.setOutlineThickness(0);
+                        ++next_text;
+                    }
                 }
                 if (event.key.code == sf::Keyboard::Right)
                 {
                     menu_ball.setOutlineThickness(10.0);
-                    menu_square.setOutlineThickness(0.0);
+                    menu_cube.setOutlineThickness(0.0);
                     object_text.setString("BALL");
                     object_text.setPosition(ball_text_pos);
+                    object_chosen = 1;
+
                 }
                 if (event.key.code == sf::Keyboard::Left)
                 {
                     menu_ball.setOutlineThickness(0.0);
-                    menu_square.setOutlineThickness(10.0);
+                    menu_cube.setOutlineThickness(10.0);
                     object_text.setString("CUBE");
                     object_text.setPosition(cube_text_pos);
-
+                    object_chosen = 0;
                 }
             }
-    
         }
         if (next_text == 0)
         {
-            welcome.setPosition(165, 300);
-            welcome.setCharacterSize(50);
+            menu_text.setPosition(165, 300);
+            menu_text.setCharacterSize(50);
+            menu_text.setString(welcome_text[0]);
         }
-        else 
+        else if (next_text == 1)
         {
-            welcome.setPosition(165, 0);
-            welcome.setCharacterSize(30);
+            menu_text.setPosition(165, 0);
+            menu_text.setCharacterSize(30);
+            menu_text.setString(welcome_text[1]);
         }
         
-        
-        welcome.setString(welcome_text[next_text]);
-
+        //menu_text.setString(welcome_text[next_text]);
+        /*---------------------*/
+        /*   Main draw block   */
+        /*---------------------*/
         window.clear();
-       
-        window.draw(welcome);
-        if (next_text == 1)
+        if (next_text == 0)
         {
+            window.draw(menu_text);
+        }
+        else if (next_text == 1)
+        {
+            window.draw(menu_text);
             window.draw(menu_ball);
-            window.draw(menu_square);
-            window.draw(object_text);
-            
+            window.draw(menu_cube);
+            window.draw(object_text);   
+        }
+        else if (next_text == 2)
+        {
+            window.draw(menu_text);
+            if (object_chosen == 0)
+            {
+                window.draw(menu_cube);
+            }
+            else
+            {
+                window.draw(menu_ball);
+            }
         }
         window.display();
 
     }
-    
-
-
     return 0;
 }
