@@ -32,8 +32,6 @@ int main()
     obj_selection_txt.push_back("Cube selected!");
     obj_selection_txt.push_back("Ball selected!");
 
-   
-
     int welcome_vec_size = welcome_text.size()-1; 
     int next_text{ 0 }; // Used to iterate through the welcome text vector
 
@@ -76,18 +74,20 @@ int main()
     /*----------------------*/
     sf::CircleShape menu_ball;
     menu_ball.setRadius(75);
-    menu_ball.setPosition(600, 300);
+    sf::Vector2f menu_ball_pos(600, 300);
+    menu_ball.setPosition(menu_ball_pos);
     menu_ball.setOutlineColor(sf::Color::White);
     menu_ball.setOutlineThickness(0.0);
     menu_ball.setTexture(&concrete);
 
     sf::RectangleShape menu_cube;
     menu_cube.setSize(sf::Vector2f(150.f, 150.f));
-    menu_cube.setPosition(200, 300);
+    sf::Vector2f menu_cube_pos(200, 300);
+    menu_cube.setPosition(menu_cube_pos);
     menu_cube.setOutlineColor(sf::Color::White);
     menu_cube.setOutlineThickness(10.0);
     menu_cube.setTexture(&crate);
-
+    
     /*---------------------*/
     /*   Main Objects      */
     /*---------------------*/
@@ -114,54 +114,55 @@ int main()
             {
                 if (event.key.code == sf::Keyboard::Space)
                 {
-                    // This goes up to the object selection menu 
+                    /* This changes to the object selection menu */
                     if (next_text < 1) 
                     {
                         ++next_text;
-                        std::cout << "next text: " << next_text;
                     }
-                    // Cube chosen
+                    /* Cube chosen */ 
                     else if (object_chosen == 0 && next_text == 1)
                     {
                             menu_text.setString(obj_selection_txt[0]);
-                            menu_text.setCharacterSize(75);
-                            menu_text.setPosition(250, 0);
-                            menu_cube.setPosition(320, 300);
-                            menu_cube.setScale(2, 2);
+                            menu_text.setCharacterSize(75);                            
                             menu_cube.setOutlineThickness(0);
                             ++next_text;
                     }
-                    // Ball Chosen
+                    /* Ball Chosen */
                     else if (object_chosen == 1 && next_text == 1)
                     {
                         menu_text.setString(obj_selection_txt[1]);
-                        menu_text.setCharacterSize(75);
-                        menu_text.setPosition(250, 0);
-                        menu_ball.setPosition(320, 300);
-                        menu_ball.setScale(2, 2);
+                        menu_text.setCharacterSize(75);                   
                         menu_ball.setOutlineThickness(0);
                         ++next_text;
                     }
                 }
                 if (event.key.code == sf::Keyboard::Right)
                 {
-                    menu_ball.setOutlineThickness(10.0);
-                    menu_cube.setOutlineThickness(0.0);
-                    object_text.setString("BALL");
-                    object_text.setPosition(ball_text_pos);
-                    object_chosen = 1;
+                    if (next_text == 1)
+                    {
+                        menu_ball.setOutlineThickness(10.0);
+                        menu_cube.setOutlineThickness(0.0);
+                        object_text.setString("BALL");
+                        object_text.setPosition(ball_text_pos);
+                        object_chosen = 1;
+                    }
 
                 }
                 if (event.key.code == sf::Keyboard::Left)
                 {
-                    menu_ball.setOutlineThickness(0.0);
-                    menu_cube.setOutlineThickness(10.0);
-                    object_text.setString("CUBE");
-                    object_text.setPosition(cube_text_pos);
-                    object_chosen = 0;
+                    if (next_text == 1)
+                    {
+                        menu_ball.setOutlineThickness(0.0);
+                        menu_cube.setOutlineThickness(10.0);
+                        object_text.setString("CUBE");
+                        object_text.setPosition(cube_text_pos);
+                        object_chosen = 0;
+                    }
                 }
             }
         }
+        
+        /* Changes the font size and text position for menu text */
         if (next_text == 0)
         {
             menu_text.setPosition(165, 300);
@@ -174,16 +175,28 @@ int main()
             menu_text.setCharacterSize(30);
             menu_text.setString(welcome_text[1]);
         }
+
+        /* Chnages the y pos of selected object to make it drop from the screen */
+        if (next_text == 2)
+        {
+                menu_text.setPosition(250, 0);
+                menu_cube_pos.y += 10.0;
+                menu_ball_pos.y += 10.0;
+                menu_cube.setPosition(menu_cube_pos);
+                menu_ball.setPosition(menu_ball_pos);
+        }
         
-        //menu_text.setString(welcome_text[next_text]);
         /*---------------------*/
         /*   Main draw block   */
         /*---------------------*/
         window.clear();
+        
+        // Welcome page
         if (next_text == 0)
         {
             window.draw(menu_text);
         }
+        // Object selection page
         else if (next_text == 1)
         {
             window.draw(menu_text);
@@ -191,6 +204,7 @@ int main()
             window.draw(menu_cube);
             window.draw(object_text);   
         }
+        // Object selected page
         else if (next_text == 2)
         {
             window.draw(menu_text);
@@ -203,8 +217,9 @@ int main()
                 window.draw(menu_ball);
             }
         }
+        
         window.display();
-
+        //std::cout << "next text: " << next_text << std::endl;
     }
     return 0;
 }
