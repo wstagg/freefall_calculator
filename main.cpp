@@ -11,13 +11,15 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1000, 800), "Freefall Calculator");
+    int x_res{ 1000 };
+    int y_res{ 800 };
+    sf::RenderWindow window(sf::VideoMode(x_res, y_res), "Freefall Calculator");
     
     /*------------------------------------*/
     /* Creating text to display on screen */
     /*------------------------------------*/
     sf::Font arial;
-    if (!arial.loadFromFile("C:\\Users\\wesleystagg\\source\\repos\\SFMLsquare\\arial.ttf"))
+    if (!arial.loadFromFile("C:\\Users\\wesst\\source\\repos\\freefall_calculator\\arial.ttf"))
     {
         std::cout << "Cannot load font file.";
     }
@@ -33,9 +35,10 @@ int main()
     obj_selection_txt.push_back("Ball selected!");
 
     int welcome_vec_size = welcome_text.size()-1; 
-    int next_text{ 0 }; // Used to iterate through the welcome text vector
+    /* Used to iterate through different pages of the application */
+    int next_text{ 0 };   
 
-    // Text for object selection 
+    /* Text for object selection */
     sf::Vector2f cube_text_pos(230.0, 500.0);
     sf::Vector2f ball_text_pos(640.0, 500.0);
 
@@ -52,19 +55,19 @@ int main()
     settings.antialiasingLevel = 8;
     
     sf::Texture concrete;
-    if (!concrete.loadFromFile("C:\\Users\\wesleystagg\\textures\\concrete_texture.jpg"));
+    if (!concrete.loadFromFile("C:\\Users\\wesst\\textures\\concrete_texture.jpg"));
     {
         std::cout << "Cannot load concrete texture\n";
     }
 
     sf::Texture crate;
-    if (!crate.loadFromFile("C:\\Users\\wesleystagg\\textures\\crate_texture.jpg"))
+    if (!crate.loadFromFile("C:\\Users\\wesst\\textures\\crate_texture.jpg"))
     {
-        std::cout << "Cannot load concrete texture\n";
+        std::cout << "Cannot load crate texture\n";
     }
 
     sf::Texture backgorund;
-    if (!backgorund.loadFromFile("C:\\Users\\wesleystagg\\textures\\sky_bg.png"))
+    if (!backgorund.loadFromFile("C:\\Users\\wesst\\textures\\sky_bg.png"))
     {
         std::cout << "Cannot load background texture\n";
     }
@@ -146,7 +149,6 @@ int main()
                         object_text.setPosition(ball_text_pos);
                         object_chosen = 1;
                     }
-
                 }
                 if (event.key.code == sf::Keyboard::Left)
                 {
@@ -176,14 +178,21 @@ int main()
             menu_text.setString(welcome_text[1]);
         }
 
-        /* Chnages the y pos of selected object to make it drop from the screen */
+        /* Changes the y pos of object when it has been selected to make 
+           it drop from the screen */
         if (next_text == 2)
         {
-                menu_text.setPosition(250, 0);
-                menu_cube_pos.y += 10.0;
-                menu_ball_pos.y += 10.0;
-                menu_cube.setPosition(menu_cube_pos);
-                menu_ball.setPosition(menu_ball_pos);
+            float fall_speed{ 0.5 };
+            menu_text.setPosition(250, 0);
+            menu_cube_pos.y += fall_speed;
+            menu_ball_pos.y += fall_speed;
+            menu_cube.setPosition(menu_cube_pos);
+            menu_ball.setPosition(menu_ball_pos);
+            //std::cout << menu_ball_pos.y << std::endl;
+            if ((menu_ball_pos.y  > y_res) || (menu_cube_pos.y > y_res))
+            {
+                next_text++;
+            }
         }
         
         /*---------------------*/
@@ -216,6 +225,10 @@ int main()
             {
                 window.draw(menu_ball);
             }
+        }
+        else if (next_text == 3)
+        {
+
         }
         
         window.display();
