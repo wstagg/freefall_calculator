@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Event.hpp>
 #include <iostream>
-#include <string_view>
 #include <string>
 #include <vector>
 #include "inputs.h"
@@ -19,12 +18,15 @@ int main()
     /* Creating text to display on screen */
     /*------------------------------------*/
     sf::Font arial;
-    if (!arial.loadFromFile("C:\\Users\\wesst\\source\\repos\\freefall_calculator\\arial.ttf"))
+    if (!arial.loadFromFile("C:\\Users\\WesleyStagg\\source\\repos\\freefall_calculator\\arial.ttf"))
     {
         std::cout << "Cannot load font file.";
     }
+
     sf::Text menu_text;
     menu_text.setFont(arial);
+    //menu_text.setFillColor(sf::Color::Black);
+    menu_text.setOutlineThickness(0.5);
 
     std::vector <std::string> welcome_text;
     welcome_text.push_back("Welcome to Freefall Calculator!");
@@ -35,18 +37,56 @@ int main()
     obj_selection_txt.push_back("Ball selected!");
 
     int welcome_vec_size = welcome_text.size()-1; 
+    
     /* Used to iterate through different pages of the application */
     int next_text{ 0 };   
 
     /* Text for object selection */
     sf::Vector2f cube_text_pos(230.0, 500.0);
     sf::Vector2f ball_text_pos(640.0, 500.0);
-
     sf::Text object_text;
     object_text.setFont(arial);
-    object_text.setString("CUBE");
+    //object_text.setFillColor(sf::Color::Black);
+    object_text.setString("Cube");
     object_text.setPosition(cube_text_pos);
-   
+    
+    /* Text for pressing space bar */
+    sf::Text press_space;
+    press_space.setFont(arial);
+    //press_space.setFillColor(sf::Color::Black);
+    press_space.setString("Push space to continue...");
+    press_space.setPosition(320, 700);
+
+    /* User input text */
+    sf::Text user_text;
+    user_text.setFont(arial);
+    sf::String user_input;
+
+    /* User input page */
+    int next_input{ 0 }; // changes input selection
+
+    sf::Text get_drop_ht;
+    get_drop_ht.setFont(arial);
+    //get_drop_ht.setFillColor(sf::Color::Black);
+    get_drop_ht.setPosition(0, 0);
+    get_drop_ht.setString("Enter drop height (Meters):");
+
+    sf::Text input_drop_ht;
+    input_drop_ht.setFont(arial);
+    input_drop_ht.setPosition(600, 0);
+    sf::String drop_ht_string;
+
+    sf::Text get_obj_mass;
+    get_obj_mass.setFont(arial);
+    //get_obj_mass.setFillColor(sf::Color::Black);
+    get_obj_mass.setPosition(0, 300);
+    get_obj_mass.setString("Enter object mass (KG):");
+
+    sf::Text input_obj_mass;
+    input_obj_mass.setFont(arial);
+    input_obj_mass.setPosition(600, 300);
+    sf::String obj_mass_string;
+
 
     /*----------------------------------*/
     /* Loading in textures for objects  */
@@ -55,19 +95,19 @@ int main()
     settings.antialiasingLevel = 8;
     
     sf::Texture concrete;
-    if (!concrete.loadFromFile("C:\\Users\\wesst\\textures\\concrete_texture.jpg"));
+    if (!concrete.loadFromFile("C:\\Users\\WesleyStagg\\source\\repos\\freefall_calculator\\textures\\concrete_texture.jpg"));
     {
         std::cout << "Cannot load concrete texture\n";
     }
 
     sf::Texture crate;
-    if (!crate.loadFromFile("C:\\Users\\wesst\\textures\\crate_texture.jpg"))
+    if (!crate.loadFromFile("C:\\Users\\WesleyStagg\\source\\repos\\freefall_calculator\\textures\\crate_texture.jpg"))
     {
         std::cout << "Cannot load crate texture\n";
     }
 
-    sf::Texture backgorund;
-    if (!backgorund.loadFromFile("C:\\Users\\wesst\\textures\\sky_bg.png"))
+    sf::Texture backgorund_texture;
+    if (!backgorund_texture.loadFromFile("C:\\Users\\WesleyStagg\\source\\repos\\freefall_calculator\\textures\\sky_bg.png"))
     {
         std::cout << "Cannot load background texture\n";
     }
@@ -90,6 +130,13 @@ int main()
     menu_cube.setOutlineColor(sf::Color::White);
     menu_cube.setOutlineThickness(10.0);
     menu_cube.setTexture(&crate);
+
+    /*-------------------------*/
+    /* Creates menu background */
+    /*-------------------------*/
+    sf::Sprite background_image;
+    background_image.setScale(1,0.9);
+    background_image.setTexture(backgorund_texture);
     
     /*---------------------*/
     /*   Main Objects      */
@@ -138,6 +185,10 @@ int main()
                         menu_ball.setOutlineThickness(0);
                         ++next_text;
                     }
+                    else if (next_text == 3) 
+                    {
+                        next_input = 1;
+                    }
                 }
                 if (event.key.code == sf::Keyboard::Right)
                 {
@@ -145,7 +196,7 @@ int main()
                     {
                         menu_ball.setOutlineThickness(10.0);
                         menu_cube.setOutlineThickness(0.0);
-                        object_text.setString("BALL");
+                        object_text.setString("Ball");
                         object_text.setPosition(ball_text_pos);
                         object_chosen = 1;
                     }
@@ -156,9 +207,30 @@ int main()
                     {
                         menu_ball.setOutlineThickness(0.0);
                         menu_cube.setOutlineThickness(10.0);
-                        object_text.setString("CUBE");
+                        object_text.setString("Cube");
                         object_text.setPosition(cube_text_pos);
                         object_chosen = 0;
+                    }
+                }
+            }
+            if (event.type == sf::Event::TextEntered)
+            {
+                if (next_input == 0)
+                {
+                    if (event.text.unicode >= 48 && event.text.unicode <=57)
+                    {
+                        //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
+                        drop_ht_string += event.text.unicode;
+                        input_drop_ht.setString(drop_ht_string);
+                    }
+                }
+                else if (next_input == 1)
+                {
+                    if (event.text.unicode >= 48 && event.text.unicode <= 57)
+                    {
+                        //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
+                        obj_mass_string += event.text.unicode;
+                        input_obj_mass.setString(obj_mass_string);
                     }
                 }
             }
@@ -182,10 +254,10 @@ int main()
            it drop from the screen */
         if (next_text == 2)
         {
-            float fall_speed{ 0.5 };
+            float fall_velocity{ 1 };
             menu_text.setPosition(250, 0);
-            menu_cube_pos.y += fall_speed;
-            menu_ball_pos.y += fall_speed;
+            menu_cube_pos.y += fall_velocity;
+            menu_ball_pos.y += fall_velocity;
             menu_cube.setPosition(menu_cube_pos);
             menu_ball.setPosition(menu_ball_pos);
             //std::cout << menu_ball_pos.y << std::endl;
@@ -199,11 +271,13 @@ int main()
         /*   Main draw block   */
         /*---------------------*/
         window.clear();
+        //window.draw(background_image);
         
         // Welcome page
         if (next_text == 0)
         {
             window.draw(menu_text);
+            window.draw(press_space);   
         }
         // Object selection page
         else if (next_text == 1)
@@ -211,9 +285,10 @@ int main()
             window.draw(menu_text);
             window.draw(menu_ball);
             window.draw(menu_cube);
-            window.draw(object_text);   
+            window.draw(object_text); 
+            window.draw(press_space);
         }
-        // Object selected page
+        /* Object selected page */
         else if (next_text == 2)
         {
             window.draw(menu_text);
@@ -226,9 +301,15 @@ int main()
                 window.draw(menu_ball);
             }
         }
+        /* User input page */
         else if (next_text == 3)
         {
-
+            window.draw(press_space);
+            window.draw(get_drop_ht);
+            window.draw(get_obj_mass);
+            window.draw(input_drop_ht);
+            window.draw(input_obj_mass);
+            
         }
         
         window.display();
