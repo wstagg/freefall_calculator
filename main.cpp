@@ -5,7 +5,7 @@
 #include <vector>
 #include "inputs.h"
 #include "ball_drop.h" 
-
+#include "calculations.h"
 
 
 int main()
@@ -13,6 +13,7 @@ int main()
     int x_res{ 1000 };
     int y_res{ 800 };
     sf::RenderWindow window(sf::VideoMode(x_res, y_res), "Freefall Calculator");
+    window.setFramerateLimit(60);
     
     /*------------------------------------*/
     /* Creating text to display on screen */
@@ -74,7 +75,7 @@ int main()
     sf::Text input_drop_ht;
     input_drop_ht.setFont(arial);
     input_drop_ht.setPosition(600, 0);
-    sf::String drop_ht_string;
+    std::string drop_ht_string;
 
     sf::Text get_obj_mass;
     get_obj_mass.setFont(arial);
@@ -85,7 +86,7 @@ int main()
     sf::Text input_obj_mass;
     input_obj_mass.setFont(arial);
     input_obj_mass.setPosition(600, 300);
-    sf::String obj_mass_string;
+    std::string obj_mass_string;
 
 
     /*----------------------------------*/
@@ -142,6 +143,8 @@ int main()
     /*   Main Objects      */
     /*---------------------*/
     int object_chosen {0};
+    double drop_ht {}; // drop ht for maths
+    double obj_mass{}; // object mass for maths
 
     
     /*---------------------*/
@@ -175,7 +178,7 @@ int main()
                             menu_text.setString(obj_selection_txt[0]);
                             menu_text.setCharacterSize(75);                            
                             menu_cube.setOutlineThickness(0);
-                            ++next_text;
+                            next_text = 2;
                     }
                     /* Ball Chosen */
                     else if (object_chosen == 1 && next_text == 1)
@@ -183,11 +186,35 @@ int main()
                         menu_text.setString(obj_selection_txt[1]);
                         menu_text.setCharacterSize(75);                   
                         menu_ball.setOutlineThickness(0);
-                        ++next_text;
+                        next_text = 2;
                     }
-                    else if (next_text == 3) 
+                    /* Goes to next text input when drop_ht string lenght is > 0 */
+                    else if ((next_text == 3) && (drop_ht_string.length() > 0) && (next_input == 0))
                     {
                         next_input = 1;
+                        input_drop_ht.setFillColor(sf::Color::Green);
+                    }
+                    else if ((next_input == 1) && (obj_mass_string.length() > 0))
+                    {
+                        //input_obj_mass.setFillColor(sf::Color::Green);
+                        next_text = 4;
+                        
+                        //debug use of calculation functions
+                        double fall_time{ calculate_free_fall_time(obj_mass, drop_ht) };
+                        calculate_distance_fallen(drop_ht, fall_time);
+
+                    }
+                }
+                /* Alows user to backaspace to delete text inputs */
+                if (event.key.code == sf::Keyboard::BackSpace)
+                {
+                    if (next_input == 0)
+                    { 
+                        input_drop_ht.setString(erase_text(drop_ht_string));
+                    }
+                    else if (next_input == 1)
+                    {
+                        input_obj_mass.setString(erase_text(obj_mass_string));
                     }
                 }
                 if (event.key.code == sf::Keyboard::Right)
@@ -199,6 +226,7 @@ int main()
                         object_text.setString("Ball");
                         object_text.setPosition(ball_text_pos);
                         object_chosen = 1;
+                            std::cout << "ball chosen\n";
                     }
                 }
                 if (event.key.code == sf::Keyboard::Left)
@@ -210,6 +238,7 @@ int main()
                         object_text.setString("Cube");
                         object_text.setPosition(cube_text_pos);
                         object_chosen = 0;
+                            std::cout << "cube chosen\n";
                     }
                 }
             }
@@ -222,6 +251,7 @@ int main()
                         //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
                         drop_ht_string += event.text.unicode;
                         input_drop_ht.setString(drop_ht_string);
+                        drop_ht = std::stod(drop_ht_string);                       
                     }
                 }
                 else if (next_input == 1)
@@ -231,6 +261,7 @@ int main()
                         //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
                         obj_mass_string += event.text.unicode;
                         input_obj_mass.setString(obj_mass_string);
+                        obj_mass = std::stod(obj_mass_string);
                     }
                 }
             }
@@ -254,7 +285,7 @@ int main()
            it drop from the screen */
         if (next_text == 2)
         {
-            float fall_velocity{ 1 };
+            float fall_velocity{ 10 };
             menu_text.setPosition(250, 0);
             menu_cube_pos.y += fall_velocity;
             menu_ball_pos.y += fall_velocity;
@@ -308,12 +339,20 @@ int main()
             window.draw(get_drop_ht);
             window.draw(get_obj_mass);
             window.draw(input_drop_ht);
-            window.draw(input_obj_mass);
-            
+            window.draw(input_obj_mass);    
+        } 
+        else if (next_text == 4)
+        {
         }
-        
         window.display();
+       
+        /* debug cout */
+
         //std::cout << "next text: " << next_text << std::endl;
+        //std::cout << drop_ht << std::endl;
+        //std::cout << obj_mass << std::endl;
     }
     return 0;
 }
+
+
