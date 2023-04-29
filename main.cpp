@@ -352,7 +352,7 @@ int main()
             }
             
             // This handles the text cursor pulsating from white to black. Pulse //
-            // frequency can be changed by editting "text_cursor_pulse_seconds"  //
+            // frequency can be changed by editted "text_cursor_pulse_seconds"  //
             if (text_cursor_clock_start)
             {
                 sf::Time cursor_time_passed = text_cursor_clock.getElapsedTime();
@@ -387,7 +387,7 @@ int main()
                     text_cursor_clock.restart();
                 }
                 //std::cout << cursor_time_passed.asSeconds() << std::endl;
-                //std::cout << "switch colour: " << switch_colour << std::endl;   
+                //std::cout << "switch colour: " << switch_text_cursor_colour << std::endl;
             }
             
         }
