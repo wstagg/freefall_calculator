@@ -1,7 +1,11 @@
 #include <iostream>
-#include "calculations.h"
+#include <SFML/Graphics.hpp>
+#include <SFML/Window/Event.hpp>
 #include <cmath>
 #include <iomanip>
+#include <vector>
+
+#include "calculations.h"
 
 const double g{ 9.80665 };   // Gravity (m/s2)
 const double p{ 1.2041 };    // Density of air (kg/m3)
@@ -28,8 +32,8 @@ double calculate_free_fall_time(double mass, double height)
 void calculate_distance_fallen(double height, double fall_time)
 {
     const double fall_velcocity{ height / fall_time };
-    double i{ 0 };
-    for (; i < fall_time; ++i)
+   
+    for (double i{ 0 }; i < fall_time; ++i)
     {
         std::cout << std::setprecision(4);
         std::cout << "At " << i << " seconds the ball height is " << height << "m\n";
@@ -44,4 +48,15 @@ double calculate_projected_area(double diameter)
     double radius{ diameter / 2 };
     return pi * pow(radius, 2.0);
 }
+
+// Calculate object fall velocity on screen
+double obj_fall_velocity(double fall_time, double drop_ht, double screen_ht)
+{
+    
+    double pix_per_meter = screen_ht / drop_ht;
+
+    return screen_ht / fall_time ;
+}
+
+
 
