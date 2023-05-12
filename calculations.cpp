@@ -52,10 +52,10 @@ double calculate_projected_area(double diameter)
 // Calculate object fall velocity on screen
 double obj_fall_velocity(double fall_time, double drop_ht, double screen_ht)
 {
-    
+    double meters_per_second{ drop_ht / fall_time };
     double pix_per_meter = screen_ht / drop_ht;
 
-    return screen_ht / fall_time ;
+    return pix_per_meter * meters_per_second ;
 }
 
 

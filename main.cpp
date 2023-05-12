@@ -5,7 +5,6 @@
 #include <vector>
 
 #include "inputs.h"
-#include "ball_drop.h" 
 #include "calculations.h"
 
 
@@ -172,7 +171,7 @@ int main()
     double rel_screen_drop_ht{};
     double fall_time{};
 
-    const float time_delta{ 0.1 };
+    //const float time_delta{ 0.5 };
 
     /*--------------------*/
     /*   Time Objects     */
@@ -436,18 +435,24 @@ int main()
             if (freefall_clock_start == true)
             {
                 sf::Time ff_timer = freefall_clock.getElapsedTime();
-                
+                sf::Time delta_time = sf::seconds(1);
+                sf::Time total_fall_time = sf::seconds(fall_time);
                 std::cout << ff_timer.asSeconds() << std::endl; // debug 
-
-                ff_cube_pos.y += fall_velocity;
-                ff_ball_pos.y += fall_velocity;
-                menu_cube.setPosition(ff_cube_pos);
-                menu_ball.setPosition(ff_ball_pos);
-
+                
+                if (ff_timer > delta_time)
+                {
+                    ff_cube_pos.y += fall_velocity;
+                    ff_ball_pos.y += fall_velocity;
+                    menu_cube.setPosition(ff_cube_pos);
+                    menu_ball.setPosition(ff_ball_pos);
+                    freefall_clock.restart();
+                }
+                                   
                 if ((ff_ball_pos.y == (y_res - (ball_rad *2))) || (ff_cube_pos.y > (y_res - cube_size[0])))
                 {
                     freefall_clock_start = false;
                     //freefall_clock.restart();
+                    next_display = 2;
                 }
             }       
         }   
