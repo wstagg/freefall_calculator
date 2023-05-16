@@ -32,8 +32,5 @@
     <ClInclude Include="inputs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ball_drop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

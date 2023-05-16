@@ -233,7 +233,7 @@ int main()
                     {
                         next_text_input = 1;
                         input_drop_ht.setFillColor(sf::Color::Green);
-                        input_obj_mass.setString("I");
+                        input_obj_mass.setString("|");
                         text_cursor_clock_start = true;
                     }
                     else if ((next_text_input == 1) && (obj_mass_string.length() > 0))
@@ -376,14 +376,7 @@ int main()
                 sf::Time obj_seconds_passed = mass_input_clock.getElapsedTime();
                 sf::Time obj_seconds = sf::seconds(1.f);
                 if (obj_seconds_passed > obj_seconds)
-                {
-                    /*menu_ball.setPosition(ff_ball_pos);
-                    menu_cube.setPosition(ff_cube_pos);
-
-                    menu_ball.setRadius(10.f);
-                    menu_cube.setSize(sf::Vector2f::Vector2(10.f, 10.f));*/
-                    //freefall_clock.restart();
-
+                {                  
                     next_display = 4;
                     freefall_clock_start = true;
                     freefall_clock.restart();
@@ -451,8 +444,7 @@ int main()
                 if ((ff_ball_pos.y == (y_res - (ball_rad *2))) || (ff_cube_pos.y > (y_res - cube_size[0])))
                 {
                     freefall_clock_start = false;
-                    //freefall_clock.restart();
-                    next_display = 2;
+                    //freefall_clock.restart();                  
                 }
             }       
         }   

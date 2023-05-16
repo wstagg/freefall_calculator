@@ -144,7 +144,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ball_drop.h" />
     <ClInclude Include="calculations.h" />
     <ClInclude Include="inputs.h" />
   </ItemGroup>
