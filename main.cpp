@@ -22,7 +22,7 @@ int main()
     /* Create text to display on screen   */
     /*------------------------------------*/
     sf::Font arial;
-    if (!arial.loadFromFile("fonts\\arial.ttf"))
+    if (!arial.loadFromFile("fonts//arial.ttf"))
     {
         std::cout << "Cannot load font file.";
     }
@@ -92,7 +92,13 @@ int main()
     input_obj_mass.setPosition(400, 300);
     std::string obj_mass_string;
 
-    
+    sf::Text freefall_ht_txt;
+    freefall_ht_txt.setFont(arial);
+    //freefall_ht_txt.setString("test");
+    sf::Vector2f ff_text_pos(0.f, 0.0f);
+    freefall_ht_txt.setPosition(ff_text_pos);
+
+
     /*----------------------------------*/
     /* Load in textures for objects     */
     /*----------------------------------*/
@@ -100,29 +106,29 @@ int main()
     settings.antialiasingLevel = 8;
     
     sf::Texture concrete;
-    if (!concrete.loadFromFile("textures\\concrete_texture.jpg"))
+    if (!concrete.loadFromFile("textures//concrete_texture.jpg"))
     {
         std::cout << "Cannot load concrete texture\n";
     }
 
     sf::Texture crate;
-    if (!crate.loadFromFile("textures\\crate_texture.jpg"))
+    if (!crate.loadFromFile("textures//crate_texture.jpg"))
     {
         std::cout << "Cannot load crate texture\n";
     }
 
     sf::Texture backgorund_texture;
-    if (!backgorund_texture.loadFromFile("textures\\sky_bg.png"))
+    if (!backgorund_texture.loadFromFile("textures//sky_bg.png"))
     {
         std::cout << "Cannot load background texture\n";
     }
-    
+
     sf::Texture cloud_texture;
-    if (!cloud_texture.loadFromFile("textures\\cloud.png"))
+    if (!cloud_texture.loadFromFile("textures//cloud.png"))
     {
-        std::cout << "Cannot load clout texture\n";
+        std::cout << "Cannot load cloud texture\n";
     }
-    
+
     /*----------------------*/
     /* Create menu objects  */
     /*----------------------*/
@@ -163,7 +169,7 @@ int main()
     /*---------------------*/
     /*   Main Objects      */
     /*---------------------*/
-    int object_chosen {0};
+    static int object_chosen {0};
     double drop_ht {}; // drop ht for maths
     double obj_mass{}; // object mass for maths
 
@@ -246,7 +252,7 @@ int main()
                         menu_cube.setPosition(ff_cube_pos);
 
                         menu_ball.setRadius(ball_rad);
-                        menu_cube.setSize(sf::Vector2f::Vector2(cube_size[0], cube_size[1]));
+                        menu_cube.setSize(sf::Vector2f(60,60));
                         
                         //debug use of calculation functions
                         fall_time = calculate_free_fall_time(obj_mass, drop_ht);
@@ -254,8 +260,8 @@ int main()
                         //calculate_distance_fallen(drop_ht, fall_time);                       
                         
                         fall_velocity = obj_fall_velocity(fall_time, drop_ht, y_res);
-                        
-                        std::cout << "fall velocity = " << fall_velocity << std::endl;
+
+                        std::cout << "fall velocity (pix per second) = " << fall_velocity << std::endl;
                         std::cout << "drop height = " << drop_ht << std::endl;
                         std::cout << "fall time = " << fall_time << std::endl;
                     }
@@ -430,15 +436,37 @@ int main()
                 sf::Time ff_timer = freefall_clock.getElapsedTime();
                 sf::Time delta_time = sf::seconds(1);
                 sf::Time total_fall_time = sf::seconds(fall_time);
-                std::cout << ff_timer.asSeconds() << std::endl; // debug 
-                
+                //static double drop_ht_n1 = drop_ht;
+
+                //std::cout << ff_timer.asSeconds() << std::endl; // debug
+                //std::cout << object_chosen << std::endl;
                 if (ff_timer > delta_time)
                 {
                     ff_cube_pos.y += fall_velocity;
-                    ff_ball_pos.y += fall_velocity;
                     menu_cube.setPosition(ff_cube_pos);
+
+                    ff_ball_pos.y += fall_velocity;
                     menu_ball.setPosition(ff_ball_pos);
+
+                    float mps = calculate_meters_per_second(drop_ht, fall_time);
+
+                    drop_ht -= mps ;
+
                     freefall_clock.restart();
+
+                    //std::cout << ff_cube_pos.y<< std::endl;
+                    if (object_chosen == 0)
+                    {
+                        ff_text_pos.y = ff_cube_pos.y;
+                        freefall_ht_txt.setString(std::to_string(drop_ht));
+                    }
+                    if (object_chosen == 1)
+                    {
+                        ff_text_pos.y = ff_ball_pos.y;
+                        freefall_ht_txt.setString(std::to_string(drop_ht));
+                    }
+
+                    freefall_ht_txt.setPosition(ff_text_pos);
                 }
                                    
                 if ((ff_ball_pos.y == (y_res - (ball_rad *2))) || (ff_cube_pos.y > (y_res - cube_size[0])))
