@@ -259,6 +259,30 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
+Ball.o: Ball.cpp.o
+.PHONY : Ball.o
+
+# target to build an object file
+Ball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o
+.PHONY : Ball.cpp.o
+
+Ball.i: Ball.cpp.i
+.PHONY : Ball.i
+
+# target to preprocess a source file
+Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.i
+.PHONY : Ball.cpp.i
+
+Ball.s: Ball.cpp.s
+.PHONY : Ball.s
+
+# target to generate assembly for a file
+Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.s
+.PHONY : Ball.cpp.s
+
 calculations.o: calculations.cpp.o
 .PHONY : calculations.o
 
@@ -351,6 +375,9 @@ help:
 	@echo "... sfml-network"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
+	@echo "... Ball.o"
+	@echo "... Ball.i"
+	@echo "... Ball.s"
 	@echo "... calculations.o"
 	@echo "... calculations.i"
 	@echo "... calculations.s"

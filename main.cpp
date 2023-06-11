@@ -4,8 +4,11 @@
 #include <string>
 #include <vector>
 
+#include "SFML/Graphics/Color.hpp"
+#include "SFML/System/Vector2.hpp"
 #include "inputs.h"
 #include "calculations.h"
+#include "Ball.h"
 
 
 int main()
@@ -132,13 +135,15 @@ int main()
     /*----------------------*/
     /* Create menu objects  */
     /*----------------------*/
-    sf::CircleShape menu_ball;
-    menu_ball.setRadius(75);
-    sf::Vector2f menu_ball_pos(600, 300);
-    menu_ball.setPosition(menu_ball_pos);
-    menu_ball.setOutlineColor(sf::Color::White);
-    menu_ball.setOutlineThickness(0.0);
-    menu_ball.setTexture(&concrete);
+    // sf::CircleShape menu_ball;
+    // menu_ball.setRadius(75);
+    // sf::Vector2f menu_ball_pos(600, 300);
+    // menu_ball.setPosition(menu_ball_pos);
+    // menu_ball.setOutlineColor(sf::Color::White);
+    // menu_ball.setOutlineThickness(0.0);
+    // menu_ball.setTexture(&concrete);
+
+    Ball menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete, 0.f, 75};
 
     sf::Vector2f ff_ball_pos(x_middle, 0);
 
@@ -357,15 +362,17 @@ int main()
             float menu_drop_velocity{ 10 };
             menu_text.setPosition(250, 0);
             menu_cube_pos.y += menu_drop_velocity;
-            menu_ball_pos.y += menu_drop_velocity;
+            //menu_ball_pos.y += menu_drop_velocity;
             menu_cube.setPosition(menu_cube_pos);
-            menu_ball.setPosition(menu_ball_pos);
+            //menu_ball.setPosition(menu_ball_pos);
             //std::cout << menu_ball_pos.y << std::endl;
-            if ((menu_ball_pos.y  > y_res) || (menu_cube_pos.y > y_res))
-            {
-                next_display = 3;
-                text_cursor_clock_start = true;
-            }
+            // if ((menu_ball_pos.y  > y_res) || (menu_cube_pos.y > y_res))
+            // {
+            //     next_display = 3;
+            //     text_cursor_clock_start = true;
+            // }
+
+            menu_ball.menu_drop(menu_drop_velocity, y_res);
         }
         else if (next_display == 3)
         {
@@ -495,7 +502,8 @@ int main()
         else if (next_display == 1)
         {
             window.draw(menu_text);
-            window.draw(menu_ball);
+            //window.draw(menu_ball);
+            menu_ball.draw(window);
             window.draw(menu_cube);
             window.draw(object_text); 
             window.draw(press_space);
@@ -510,7 +518,8 @@ int main()
             }
             else
             {
-                window.draw(menu_ball);
+                //window.draw(menu_ball);
+                menu_ball.draw(window);
             }
         }
         /* User input page */
@@ -533,7 +542,9 @@ int main()
             }
             else if (object_chosen == 1)
             {
-                window.draw(menu_ball);
+                //window.draw(menu_ball);
+                menu_ball.draw(window);
+
 
 
             }
