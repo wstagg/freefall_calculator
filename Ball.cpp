@@ -3,15 +3,15 @@
 #include "SFML/System/Vector2.hpp"
 
 /* Ball class constructor */
-Ball::Ball(sf::Vector2f _ball_pos, sf::Color _outline_colour, sf::Texture _texture, float _outline_thickness, float _radius):
-ball_pos(_ball_pos),
+Ball::Ball(sf::Vector2f _ball_position, sf::Color _outline_colour, sf::Texture _texture, float _outline_thickness, float _radius):
+ball_position(_ball_position),
 outline_colour(_outline_colour),
 texture(_texture),
 outline_thickness(_outline_thickness),
 radius(_radius)
 {
-    ball.setRadius(75);
-    ball.setPosition(ball_pos);
+    ball.setRadius(radius);
+    ball.setPosition(ball_position);
     ball.setOutlineColor(outline_colour);
     ball.setOutlineThickness(outline_thickness);
     ball.setTexture(&texture);   
@@ -37,10 +37,15 @@ void Ball::setRadius(float rad)
     ball.setRadius(rad);
 }
 
-void Ball::menu_drop(float velocity, float y_res)
+void Ball::menu_drop(float y_res, int &next_display)
 {
-    ball_pos.y += velocity;
-    setPosition(ball_pos);
+    float velocity {10.f};
+    ball_position.y += velocity;
+    setPosition(ball_position);
 
+    if (ball_position.y > y_res)
+    {
+        next_display = 3;
+    }
 }
 

@@ -1,18 +1,13 @@
 #pragma once
 
-#include "SFML/Graphics/Color.hpp"
-#include "SFML/Graphics/RenderWindow.hpp"
-#include "SFML/Graphics/Texture.hpp"
-#include "SFML/System/Vector2.hpp"
 #include <SFML/Graphics.hpp>
-
 
 class Ball
 {
 
 private:
     sf::CircleShape ball;
-    sf::Vector2f ball_pos;
+    sf::Vector2f ball_position;
     sf::Color outline_colour;
     sf::Texture texture;
     
@@ -21,7 +16,7 @@ private:
 
 
 public:
-    Ball(sf::Vector2f _ball_pos, sf::Color _outline_colour, sf::Texture _texture, float _outline_thickness, float _radius);
+    Ball(sf::Vector2f _ball_position, sf::Color _outline_colour, sf::Texture _texture, float _outline_thickness, float _radius);
 
     void draw(sf::RenderWindow& window);
 
@@ -31,5 +26,5 @@ public:
 
     void setRadius(float rad);
 
-    void menu_drop(float velocity, float y_res);
+    void menu_drop(float y_res, int &next_display);
 };

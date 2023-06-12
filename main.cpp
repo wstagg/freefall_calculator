@@ -9,6 +9,7 @@
 #include "inputs.h"
 #include "calculations.h"
 #include "Ball.h"
+#include "Cube.h"
 
 
 int main()
@@ -135,26 +136,14 @@ int main()
     /*----------------------*/
     /* Create menu objects  */
     /*----------------------*/
-    // sf::CircleShape menu_ball;
-    // menu_ball.setRadius(75);
-    // sf::Vector2f menu_ball_pos(600, 300);
-    // menu_ball.setPosition(menu_ball_pos);
-    // menu_ball.setOutlineColor(sf::Color::White);
-    // menu_ball.setOutlineThickness(0.0);
-    // menu_ball.setTexture(&concrete);
-
+   
     Ball menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete, 0.f, 75};
 
     sf::Vector2f ff_ball_pos(x_middle, 0);
 
-    sf::RectangleShape menu_cube;
-    menu_cube.setSize(sf::Vector2f(150.f, 150.f));
-    sf::Vector2f menu_cube_pos(200, 300);
-    menu_cube.setPosition(menu_cube_pos);
-    menu_cube.setOutlineColor(sf::Color::White);
-    menu_cube.setOutlineThickness(10.0);
-    menu_cube.setTexture(&crate);
     sf::Vector2f ff_cube_pos(x_middle, 0);
+
+    Cube menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Vector2f(150.f, 150.f), sf::Color::White, crate, 10.f};
 
     std::vector <float> cube_size(60.f, 60.f);
     float ball_rad{ 30.f };
@@ -361,18 +350,19 @@ int main()
         {
             float menu_drop_velocity{ 10 };
             menu_text.setPosition(250, 0);
-            menu_cube_pos.y += menu_drop_velocity;
-            //menu_ball_pos.y += menu_drop_velocity;
-            menu_cube.setPosition(menu_cube_pos);
-            //menu_ball.setPosition(menu_ball_pos);
-            //std::cout << menu_ball_pos.y << std::endl;
-            // if ((menu_ball_pos.y  > y_res) || (menu_cube_pos.y > y_res))
-            // {
-            //     next_display = 3;
-            //     text_cursor_clock_start = true;
-            // }
-
-            menu_ball.menu_drop(menu_drop_velocity, y_res);
+            
+           
+            if( object_chosen == 0)
+            {
+                menu_cube.menu_drop(y_res, next_display);
+            }
+            else 
+            {
+                menu_ball.menu_drop(y_res, next_display);
+            }
+            
+             text_cursor_clock_start = true;
+            
         }
         else if (next_display == 3)
         {
@@ -504,7 +494,9 @@ int main()
             window.draw(menu_text);
             //window.draw(menu_ball);
             menu_ball.draw(window);
-            window.draw(menu_cube);
+            //window.draw(menu_cube);
+            menu_cube.draw(window);
+
             window.draw(object_text); 
             window.draw(press_space);
         }
@@ -514,7 +506,9 @@ int main()
             window.draw(menu_text);
             if (object_chosen == 0)
             {
-                window.draw(menu_cube);
+                //window.draw(menu_cube);
+                menu_cube.draw(window);
+
             }
             else
             {
@@ -538,7 +532,9 @@ int main()
             //window.draw(cloud);
             if (object_chosen == 0)
             {
-                window.draw(menu_cube);
+                //window.draw(menu_cube);
+                menu_cube.draw(window);
+
             }
             else if (object_chosen == 1)
             {
