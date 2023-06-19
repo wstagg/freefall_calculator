@@ -5,11 +5,13 @@
 #include <vector>
 
 #include "SFML/Graphics/Color.hpp"
+#include "SFML/System/String.hpp"
 #include "SFML/System/Vector2.hpp"
 #include "inputs.h"
 #include "calculations.h"
 #include "Ball.h"
 #include "Cube.h"
+#include "User_input_text.h"
 
 
 int main()
@@ -66,36 +68,34 @@ int main()
     press_space.setPosition(320, 700);
 
     /* User input text */
-    sf::Text user_text;
-    user_text.setFont(arial);
-    sf::String user_input;
+    // sf::Text user_text;
+    // user_text.setFont(arial);
+    // sf::String user_input;
 
+///////////////////////////////////////////////
     /* User input page */
     int next_text_input{ 0 }; // changes input selection
 
-    sf::Text get_drop_ht;
-    get_drop_ht.setFont(arial);
-    //get_drop_ht.setFillColor(sf::Color::Black);
-    get_drop_ht.setPosition(0, 0);
-    get_drop_ht.setString("Enter drop height (Meters):");
+    User_input_text enter_drop_ht{arial, sf::Vector2f(0.f, 0.f), sf::String("Enter drop height (Meters):")};
 
-    sf::Text input_drop_ht;
-    input_drop_ht.setFont(arial);
-    input_drop_ht.setPosition(400, 0);
-    input_drop_ht.setString("I");
-    std::string drop_ht_string;
+    User_input_text enter_ob_mass{arial, sf::Vector2f(0.f, 300.f), sf::String("Enter object mass (KG):")};
 
-    sf::Text get_obj_mass;
-    get_obj_mass.setFont(arial);
-    //get_obj_mass.setFillColor(sf::Color::Black);
-    get_obj_mass.setPosition(0, 300);
-    get_obj_mass.setString("Enter object mass (KG):");
+    // sf::Text input_drop_ht;
+    // input_drop_ht.setFont(arial);
+    // input_drop_ht.setPosition(400, 0);
+    // input_drop_ht.setString("I");
+    // std::string drop_ht_string;
+
+    User_input_text user_input_height{arial, sf::Vector2f(400.f, 0.f), sf::String("|")};
 
     sf::Text input_obj_mass;
     input_obj_mass.setFont(arial);
     input_obj_mass.setPosition(400, 300);
     std::string obj_mass_string;
 
+
+///////////////////////////////////////////////
+    
     sf::Text freefall_ht_txt;
     freefall_ht_txt.setFont(arial);
     //freefall_ht_txt.setString("test");
@@ -141,9 +141,9 @@ int main()
 
     sf::Vector2f ff_ball_pos(x_middle, 0);
 
-    sf::Vector2f ff_cube_pos(x_middle, 0);
-
     Cube menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Vector2f(150.f, 150.f), sf::Color::White, crate, 10.f};
+    
+    sf::Vector2f ff_cube_pos(x_middle, 0);
 
     std::vector <float> cube_size(60.f, 60.f);
     float ball_rad{ 30.f };
@@ -179,9 +179,9 @@ int main()
     sf::Clock mass_input_clock;
     bool obj_mass_input_clock_start{ false };
 
-    sf::Clock text_cursor_clock;
+    //sf::Clock text_cursor_clock;
     bool text_cursor_clock_start{ false };
-    int switch_text_cursor_colour{ 0 };
+    //int switch_text_cursor_colour{ 0 };
 
     sf::Clock freefall_clock;
     bool freefall_clock_start{ false };
@@ -229,10 +229,10 @@ int main()
                         next_display = 2;
                     }
                     /* Goes to next text input when drop_ht string length is > 0 */
-                    else if ((next_display == 3) && (drop_ht_string.length() > 0) && (next_text_input == 0))
+                    else if ((next_display == 3) && (user_input_height.get_drop_ht_str().length() > 0) && (next_text_input == 0))
                     {
                         next_text_input = 1;
-                        input_drop_ht.setFillColor(sf::Color::Green);
+                        //input_drop_ht.setFillColor(sf::Color::Green);
                         input_obj_mass.setString("|");
                         text_cursor_clock_start = true;
                     }
@@ -265,7 +265,7 @@ int main()
                 {
                     if (next_text_input == 0)
                     { 
-                        input_drop_ht.setString(erase_text(drop_ht_string));                      
+                        user_input_height.erase();                     
                     }
                     else if (next_text_input == 1)
                     {
@@ -305,10 +305,11 @@ int main()
                     {
                         //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl; 
                         text_cursor_clock_start = false;
-                        input_drop_ht.setFillColor(sf::Color::White);
-                        drop_ht_string += event.text.unicode;                     
-                        input_drop_ht.setString(drop_ht_string);
-                        drop_ht = std::stod(drop_ht_string);                       
+                        // input_drop_ht.setFillColor(sf::Color::White);
+                        // drop_ht_string += event.text.unicode;                     
+                        // input_drop_ht.setString(drop_ht_string);
+                        user_input_height.get_user_input(event);
+                        drop_ht = std::stod(user_input_height.get_drop_ht_str());                       
                     }
                 }
                 else if (next_text_input == 1)
@@ -385,45 +386,45 @@ int main()
                     freefall_clock.restart();
                 }
             }
-            
+            user_input_height.text_cursor(text_cursor_clock_start);
             // This handles the text cursor pulsating from white to black. Pulse //
             // frequency can be changed by editted "text_cursor_pulse_seconds"  //
-            if (text_cursor_clock_start)
-            {
-                sf::Time cursor_time_passed = text_cursor_clock.getElapsedTime();
-                sf::Time text_cursor_pulse_seconds = sf::seconds(0.5f);
+            // if (text_cursor_clock_start)
+            // {
+            //     sf::Time cursor_time_passed = text_cursor_clock.getElapsedTime();
+            //     sf::Time text_cursor_pulse_seconds = sf::seconds(0.5f);
                
-                if ((cursor_time_passed > text_cursor_pulse_seconds) && (switch_text_cursor_colour == 0))
-                {
-                    switch_text_cursor_colour = 1;
+            //     if ((cursor_time_passed > text_cursor_pulse_seconds) && (switch_text_cursor_colour == 0))
+            //     {
+            //         switch_text_cursor_colour = 1;
                     
-                    if (next_text_input == 0)
-                    {
-                        input_drop_ht.setFillColor(sf::Color::Black);
-                    }
-                    else if (next_text_input == 1)
-                    {
-                        input_obj_mass.setFillColor(sf::Color::Black);
-                    }
-                    text_cursor_clock.restart();
-                }
-                else if ((cursor_time_passed > text_cursor_pulse_seconds) && (switch_text_cursor_colour == 1))
-                {
-                    switch_text_cursor_colour = 0;
+            //         if (next_text_input == 0)
+            //         {
+            //             input_drop_ht.setFillColor(sf::Color::Black);
+            //         }
+            //         else if (next_text_input == 1)
+            //         {
+            //             input_obj_mass.setFillColor(sf::Color::Black);
+            //         }
+            //         text_cursor_clock.restart();
+            //     }
+            //     else if ((cursor_time_passed > text_cursor_pulse_seconds) && (switch_text_cursor_colour == 1))
+            //     {
+            //         switch_text_cursor_colour = 0;
                     
-                    if (next_text_input == 0)
-                    {
-                        input_drop_ht.setFillColor(sf::Color::White);
-                    }
-                    else if (next_text_input == 1)
-                    {
-                        input_obj_mass.setFillColor(sf::Color::White);
-                    }
-                    text_cursor_clock.restart();
-                }
-                //std::cout << cursor_time_passed.asSeconds() << std::endl;
-                //std::cout << "switch colour: " << switch_text_cursor_colour << std::endl;
-            }
+            //         if (next_text_input == 0)
+            //         {
+            //             input_drop_ht.setFillColor(sf::Color::White);
+            //         }
+            //         else if (next_text_input == 1)
+            //         {
+            //             input_obj_mass.setFillColor(sf::Color::White);
+            //         }
+            //         text_cursor_clock.restart();
+            //     }
+            //     //std::cout << cursor_time_passed.asSeconds() << std::endl;
+            //     //std::cout << "switch colour: " << switch_text_cursor_colour << std::endl;
+            // }
             
         }
         else if (next_display == 4)
@@ -520,9 +521,9 @@ int main()
         else if (next_display == 3)
         {
             window.draw(press_space);
-            window.draw(get_drop_ht);
-            window.draw(get_obj_mass);
-            window.draw(input_drop_ht);
+            enter_drop_ht.draw(window);
+            enter_ob_mass.draw(window);
+            user_input_height.draw(window);
             window.draw(input_obj_mass);
             //window.draw(text_cursor);
         } 

@@ -307,6 +307,30 @@ Cube.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Cube.cpp.s
 .PHONY : Cube.cpp.s
 
+User_input_text.o: User_input_text.cpp.o
+.PHONY : User_input_text.o
+
+# target to build an object file
+User_input_text.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o
+.PHONY : User_input_text.cpp.o
+
+User_input_text.i: User_input_text.cpp.i
+.PHONY : User_input_text.i
+
+# target to preprocess a source file
+User_input_text.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.i
+.PHONY : User_input_text.cpp.i
+
+User_input_text.s: User_input_text.cpp.s
+.PHONY : User_input_text.s
+
+# target to generate assembly for a file
+User_input_text.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.s
+.PHONY : User_input_text.cpp.s
+
 calculations.o: calculations.cpp.o
 .PHONY : calculations.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... Cube.o"
 	@echo "... Cube.i"
 	@echo "... Cube.s"
+	@echo "... User_input_text.o"
+	@echo "... User_input_text.i"
+	@echo "... User_input_text.s"
 	@echo "... calculations.o"
 	@echo "... calculations.i"
 	@echo "... calculations.s"
