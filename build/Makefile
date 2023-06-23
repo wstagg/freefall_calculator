@@ -259,30 +259,6 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
-Ball.o: Ball.cpp.o
-.PHONY : Ball.o
-
-# target to build an object file
-Ball.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o
-.PHONY : Ball.cpp.o
-
-Ball.i: Ball.cpp.i
-.PHONY : Ball.i
-
-# target to preprocess a source file
-Ball.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.i
-.PHONY : Ball.cpp.i
-
-Ball.s: Ball.cpp.s
-.PHONY : Ball.s
-
-# target to generate assembly for a file
-Ball.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Ball.cpp.s
-.PHONY : Ball.cpp.s
-
 Cube.o: Cube.cpp.o
 .PHONY : Cube.o
 
@@ -306,6 +282,30 @@ Cube.s: Cube.cpp.s
 Cube.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Cube.cpp.s
 .PHONY : Cube.cpp.s
+
+Freefall_object.o: Freefall_object.cpp.o
+.PHONY : Freefall_object.o
+
+# target to build an object file
+Freefall_object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o
+.PHONY : Freefall_object.cpp.o
+
+Freefall_object.i: Freefall_object.cpp.i
+.PHONY : Freefall_object.i
+
+# target to preprocess a source file
+Freefall_object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.i
+.PHONY : Freefall_object.cpp.i
+
+Freefall_object.s: Freefall_object.cpp.s
+.PHONY : Freefall_object.s
+
+# target to generate assembly for a file
+Freefall_object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.s
+.PHONY : Freefall_object.cpp.s
 
 User_input_text.o: User_input_text.cpp.o
 .PHONY : User_input_text.o
@@ -423,12 +423,12 @@ help:
 	@echo "... sfml-network"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
-	@echo "... Ball.o"
-	@echo "... Ball.i"
-	@echo "... Ball.s"
 	@echo "... Cube.o"
 	@echo "... Cube.i"
 	@echo "... Cube.s"
+	@echo "... Freefall_object.o"
+	@echo "... Freefall_object.i"
+	@echo "... Freefall_object.s"
 	@echo "... User_input_text.o"
 	@echo "... User_input_text.i"
 	@echo "... User_input_text.s"

@@ -4,10 +4,10 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site \
-  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/extlibs/headers/minimp3/minimp3.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_int8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_int16_t.h \
@@ -79,9 +79,9 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/strings.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/arm_neon.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/arm_neon.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/arm/limits.h \
@@ -279,7 +279,7 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_stdio.h \

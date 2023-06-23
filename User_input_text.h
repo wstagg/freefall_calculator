@@ -32,8 +32,6 @@ public:
 
     void draw(sf::RenderWindow& window);
 
-    void setPosition(sf::Vector2f pos);
-
     void get_user_input(sf::Event event);
 
     std::string get_drop_ht_str();

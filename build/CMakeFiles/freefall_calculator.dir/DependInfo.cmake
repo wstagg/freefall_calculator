@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/wesleystagg/Desktop/c++/freefall_calculator/Ball.cpp" "CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/freefall_calculator/Cube.cpp" "CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o.d"
+  "/Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.cpp" "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.cpp" "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp" "CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.cpp" "CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o" "gcc" "CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o.d"

@@ -315,32 +315,32 @@ sfml__system_OBJECTS = \
 # External object files for target sfml-system
 sfml__system_EXTERNAL_OBJECTS =
 
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build.make
-_deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/link.txt
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build.make
+_deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library ../../../lib/libsfml-system-d.dylib"
 	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/System && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-system.dir/link.txt --verbose=$(VERBOSE)
-	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/System && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-system-d.2.5.1.dylib ../../../lib/libsfml-system-d.2.5.dylib ../../../lib/libsfml-system-d.dylib
+	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/System && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-system-d.2.6.0.dylib ../../../lib/libsfml-system-d.2.6.dylib ../../../lib/libsfml-system-d.dylib
 
-_deps/sfml-build/lib/libsfml-system-d.2.5.dylib: _deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-system-d.2.5.dylib
+_deps/sfml-build/lib/libsfml-system-d.2.6.dylib: _deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-system-d.2.6.dylib
 
-_deps/sfml-build/lib/libsfml-system-d.dylib: _deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib
+_deps/sfml-build/lib/libsfml-system-d.dylib: _deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib
 	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-system-d.dylib
 
 # Rule to build all files generated by this target.

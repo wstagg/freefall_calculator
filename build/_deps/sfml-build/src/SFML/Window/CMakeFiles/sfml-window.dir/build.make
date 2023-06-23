@@ -690,58 +690,58 @@ sfml__window_OBJECTS = \
 # External object files for target sfml-window
 sfml__window_EXTERNAL_OBJECTS =
 
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/cpp_objc_conversion.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/cg_sf_conversion.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/CursorImpl.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/ClipboardImpl.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/InputImpl.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/HIDInputManager.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/HIDJoystickManager.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/JoystickImpl.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/NSImage+raw.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SensorImpl.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFApplication.m.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFApplicationDelegate.m.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFContext.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFKeyboardModifiersHelper.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView+keyboard.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView+mouse.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFSilentResponder.m.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFWindow.m.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFWindowController.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFViewController.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/VideoModeImpl.cpp.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/WindowImplCocoa.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/AutoreleasePoolWrapper.mm.o
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/lib/libsfml-system-d.2.5.1.dylib
-_deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/link.txt
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/cpp_objc_conversion.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/cg_sf_conversion.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/CursorImpl.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/ClipboardImpl.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/InputImpl.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/HIDInputManager.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/HIDJoystickManager.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/JoystickImpl.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/NSImage+raw.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SensorImpl.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFApplication.m.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFApplicationDelegate.m.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFContext.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFKeyboardModifiersHelper.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView+keyboard.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFOpenGLView+mouse.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFSilentResponder.m.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFWindow.m.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFWindowController.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/SFViewController.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/VideoModeImpl.cpp.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/WindowImplCocoa.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/OSX/AutoreleasePoolWrapper.mm.o
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib
+_deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX shared library ../../../lib/libsfml-window-d.dylib"
 	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/Window && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-window.dir/link.txt --verbose=$(VERBOSE)
-	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/Window && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-window-d.2.5.1.dylib ../../../lib/libsfml-window-d.2.5.dylib ../../../lib/libsfml-window-d.dylib
+	cd /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/Window && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-window-d.2.6.0.dylib ../../../lib/libsfml-window-d.2.6.dylib ../../../lib/libsfml-window-d.dylib
 
-_deps/sfml-build/lib/libsfml-window-d.2.5.dylib: _deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-window-d.2.5.dylib
+_deps/sfml-build/lib/libsfml-window-d.2.6.dylib: _deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-window-d.2.6.dylib
 
-_deps/sfml-build/lib/libsfml-window-d.dylib: _deps/sfml-build/lib/libsfml-window-d.2.5.1.dylib
+_deps/sfml-build/lib/libsfml-window-d.dylib: _deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib
 	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-window-d.dylib
 
 # Rule to build all files generated by this target.

@@ -19,9 +19,9 @@
 },
 {
   "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build",
-  "command": "/usr/bin/clang++  -I/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Ball.cpp",
-  "file": "/Users/wesleystagg/Desktop/c++/freefall_calculator/Ball.cpp",
-  "output": "CMakeFiles/FreeFall_calculator.dir/Ball.cpp.o"
+  "command": "/usr/bin/clang++  -I/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.cpp",
+  "output": "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o"
 },
 {
   "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build",

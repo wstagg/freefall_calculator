@@ -7,7 +7,7 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(FreeFall_calculator main.cpp calculations.cpp inputs.cpp Ball.cpp Cube.cpp User_input_text.cpp)
+add_executable(FreeFall_calculator main.cpp calculations.cpp inputs.cpp Freefall_object.cpp Cube.cpp User_input_text.cpp)
 target_link_libraries(FreeFall_calculator PRIVATE sfml-graphics sfml-window)
 target_compile_features(FreeFall_calculator PRIVATE cxx_std_17)
 if (WIN32 AND BUILD_SHARED_LIBS)

@@ -9,7 +9,7 @@
 #include "SFML/System/Vector2.hpp"
 #include "inputs.h"
 #include "calculations.h"
-#include "Ball.h"
+#include "Freefall_object.h"
 #include "Cube.h"
 #include "User_input_text.h"
 
@@ -137,11 +137,11 @@ int main()
     /* Create menu objects  */
     /*----------------------*/
    
-    Ball menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete, 0.f, 75};
+    Freefall_object menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete, 0.f, 75.f, sf::Vector2f(0.f, 0.f)};
 
     sf::Vector2f ff_ball_pos(x_middle, 0);
 
-    Cube menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Vector2f(150.f, 150.f), sf::Color::White, crate, 10.f};
+    Freefall_object menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Color::White, crate,10.f, 0.f, sf::Vector2f(150.f, 150.f) };
     
     sf::Vector2f ff_cube_pos(x_middle, 0);
 
@@ -301,16 +301,16 @@ int main()
             {
                 if (next_text_input == 0)
                 {
-                    if (event.text.unicode >= 48 && event.text.unicode <= 57)
-                    {
+                    //if (event.text.unicode >= 48 && event.text.unicode <= 57)
+                    //{
                         //std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl; 
-                        text_cursor_clock_start = false;
+                        //text_cursor_clock_start = false;
                         // input_drop_ht.setFillColor(sf::Color::White);
                         // drop_ht_string += event.text.unicode;                     
                         // input_drop_ht.setString(drop_ht_string);
                         user_input_height.get_user_input(event);
                         drop_ht = std::stod(user_input_height.get_drop_ht_str());                       
-                    }
+                    //}
                 }
                 else if (next_text_input == 1)
                 {
@@ -362,7 +362,7 @@ int main()
                 menu_ball.menu_drop(y_res, next_display);
             }
             
-             text_cursor_clock_start = true;
+            text_cursor_clock_start = true;
             
         }
         else if (next_display == 3)
