@@ -259,30 +259,6 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
-Cube.o: Cube.cpp.o
-.PHONY : Cube.o
-
-# target to build an object file
-Cube.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o
-.PHONY : Cube.cpp.o
-
-Cube.i: Cube.cpp.i
-.PHONY : Cube.i
-
-# target to preprocess a source file
-Cube.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Cube.cpp.i
-.PHONY : Cube.cpp.i
-
-Cube.s: Cube.cpp.s
-.PHONY : Cube.s
-
-# target to generate assembly for a file
-Cube.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Cube.cpp.s
-.PHONY : Cube.cpp.s
-
 Freefall_object.o: Freefall_object.cpp.o
 .PHONY : Freefall_object.o
 
@@ -306,6 +282,30 @@ Freefall_object.s: Freefall_object.cpp.s
 Freefall_object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.s
 .PHONY : Freefall_object.cpp.s
+
+Menu.o: Menu.cpp.o
+.PHONY : Menu.o
+
+# target to build an object file
+Menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o
+.PHONY : Menu.cpp.o
+
+Menu.i: Menu.cpp.i
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
 
 User_input_text.o: User_input_text.cpp.o
 .PHONY : User_input_text.o
@@ -423,12 +423,12 @@ help:
 	@echo "... sfml-network"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
-	@echo "... Cube.o"
-	@echo "... Cube.i"
-	@echo "... Cube.s"
 	@echo "... Freefall_object.o"
 	@echo "... Freefall_object.i"
 	@echo "... Freefall_object.s"
+	@echo "... Menu.o"
+	@echo "... Menu.i"
+	@echo "... Menu.s"
 	@echo "... User_input_text.o"
 	@echo "... User_input_text.i"
 	@echo "... User_input_text.s"

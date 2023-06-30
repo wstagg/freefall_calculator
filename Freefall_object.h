@@ -14,8 +14,7 @@ private:
     sf::Vector2f cube_size;
     float outline_thickness;
     float radius;
-
-
+    
 public:
     Freefall_object(sf::Vector2f _object_position, sf::Color _outline_colour, sf::Texture _texture, float _outline_thickness, float _radius, sf::Vector2f _cube_size);
 

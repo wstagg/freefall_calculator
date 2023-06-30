@@ -1,6 +1,5 @@
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o: \
-  /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp \
-  /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.h \
+CMakeFiles/FreeFall_calculator.dir/main.cpp.o: \
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/main.cpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics.hpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Window.hpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/System.hpp \
@@ -811,4 +810,8 @@ CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o: \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iomanip
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.h \
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.h \
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.h \
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/Cube.h \
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.h

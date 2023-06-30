@@ -28,6 +28,7 @@ void User_input_text::get_user_input(sf::Event event)
 {
     if (event.text.unicode >= 48 && event.text.unicode <= 57)
     {
+        stop_text_cursor_clock();
         text.setFillColor(sf::Color::White);
         input += event.text.unicode;
         text.setString(input); 
@@ -35,14 +36,14 @@ void User_input_text::get_user_input(sf::Event event)
 }
 
 /* Returns the input string */
-std::string User_input_text::get_drop_ht_str()
+std::string User_input_text::return_string()
 {
     return input;
 }
 
 /* This handles the text cursor pulsating from white to black. Pulse */
 /* frequency can be changed by editted "text_cursor_pulse_seconds"  */
-void User_input_text::text_cursor(bool text_cursor_clock_start)
+void User_input_text::text_cursor()
 {
     if (text_cursor_clock_start)
     {
@@ -67,5 +68,30 @@ void User_input_text::text_cursor(bool text_cursor_clock_start)
 void User_input_text::erase()
 {
     text.setString(erase_text(input));
+}
+
+void User_input_text::start_text_cursor_clock()
+{
+    text_cursor_clock_start = true;
+}
+
+void User_input_text::stop_text_cursor_clock()
+{
+    text_cursor_clock_start = false;
+}
+
+void User_input_text::setString(std::string input_text)
+{
+    text.setString(input_text);
+}
+
+void User_input_text::setFillColor(sf::Color colour)
+{
+    text.setFillColor(colour);
+}
+
+int User_input_text::return_string_Lenght()
+{
+    return input.length();
 }
 

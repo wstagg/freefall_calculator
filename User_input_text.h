@@ -21,7 +21,7 @@ private:
     sf::Color text_colour;
     double drop_ht;
     sf::Clock text_cursor_clock;
-    //bool text_cursor_clock_start{ false };
+    bool text_cursor_clock_start{ false };
     int switch_text_cursor_colour{ 0 };
 
     
@@ -34,11 +34,19 @@ public:
 
     void get_user_input(sf::Event event);
 
-    std::string get_drop_ht_str();
+    std::string return_string();
 
-    void text_cursor(bool text_cursor_clock_start);
+    void text_cursor();
 
     void erase();
 
+    void start_text_cursor_clock();
+    
+    void stop_text_cursor_clock();
 
+    void setString(std::string input_text);
+
+    void setFillColor(sf::Color colur);
+
+    int return_string_Lenght();
 };

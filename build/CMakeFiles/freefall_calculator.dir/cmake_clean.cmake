@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o"
-  "CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o.d"
   "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o"
   "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o.d"
+  "CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o"
+  "CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o.d"
   "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o"
   "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o.d"
   "CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o"

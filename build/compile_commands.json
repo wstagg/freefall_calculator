@@ -25,15 +25,15 @@
 },
 {
   "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build",
-  "command": "/usr/bin/clang++  -I/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Cube.cpp",
-  "file": "/Users/wesleystagg/Desktop/c++/freefall_calculator/Cube.cpp",
-  "output": "CMakeFiles/FreeFall_calculator.dir/Cube.cpp.o"
-},
-{
-  "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build",
   "command": "/usr/bin/clang++  -I/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.cpp",
   "file": "/Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.cpp",
   "output": "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build",
+  "command": "/usr/bin/clang++  -I/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Menu.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/freefall_calculator/Menu.cpp",
+  "output": "CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o"
 },
 {
   "directory": "/Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-build/src/SFML/System",
