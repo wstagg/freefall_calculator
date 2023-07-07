@@ -331,30 +331,6 @@ User_input_text.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.s
 .PHONY : User_input_text.cpp.s
 
-calculations.o: calculations.cpp.o
-.PHONY : calculations.o
-
-# target to build an object file
-calculations.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o
-.PHONY : calculations.cpp.o
-
-calculations.i: calculations.cpp.i
-.PHONY : calculations.i
-
-# target to preprocess a source file
-calculations.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/calculations.cpp.i
-.PHONY : calculations.cpp.i
-
-calculations.s: calculations.cpp.s
-.PHONY : calculations.s
-
-# target to generate assembly for a file
-calculations.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FreeFall_calculator.dir/build.make CMakeFiles/FreeFall_calculator.dir/calculations.cpp.s
-.PHONY : calculations.cpp.s
-
 inputs.o: inputs.cpp.o
 .PHONY : inputs.o
 
@@ -432,9 +408,6 @@ help:
 	@echo "... User_input_text.o"
 	@echo "... User_input_text.i"
 	@echo "... User_input_text.s"
-	@echo "... calculations.o"
-	@echo "... calculations.i"
-	@echo "... calculations.s"
 	@echo "... inputs.o"
 	@echo "... inputs.i"
 	@echo "... inputs.s"

@@ -83,24 +83,10 @@ CMakeFiles/FreeFall_calculator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FreeFall_calculator.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/freefall_calculator/main.cpp -o CMakeFiles/FreeFall_calculator.dir/main.cpp.s
 
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o: CMakeFiles/FreeFall_calculator.dir/flags.make
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o: /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o: CMakeFiles/FreeFall_calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o -MF CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o.d -o CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp
-
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FreeFall_calculator.dir/calculations.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp > CMakeFiles/FreeFall_calculator.dir/calculations.cpp.i
-
-CMakeFiles/FreeFall_calculator.dir/calculations.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FreeFall_calculator.dir/calculations.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/freefall_calculator/calculations.cpp -o CMakeFiles/FreeFall_calculator.dir/calculations.cpp.s
-
 CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o: CMakeFiles/FreeFall_calculator.dir/flags.make
 CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o: /Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.cpp
 CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o: CMakeFiles/FreeFall_calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o -MF CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o.d -o CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.cpp
 
 CMakeFiles/FreeFall_calculator.dir/inputs.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/FreeFall_calculator.dir/inputs.cpp.s: cmake_force
 CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o: CMakeFiles/FreeFall_calculator.dir/flags.make
 CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o: /Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.cpp
 CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o: CMakeFiles/FreeFall_calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o -MF CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o.d -o CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Freefall_object.cpp
 
 CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.s: cmake_force
 CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o: CMakeFiles/FreeFall_calculator.dir/flags.make
 CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o: /Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.cpp
 CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o: CMakeFiles/FreeFall_calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o -MF CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o.d -o CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/User_input_text.cpp
 
 CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.s: cmake_force
 CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o: CMakeFiles/FreeFall_calculator.dir/flags.make
 CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o: /Users/wesleystagg/Desktop/c++/freefall_calculator/Menu.cpp
 CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o: CMakeFiles/FreeFall_calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o -MF CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o.d -o CMakeFiles/FreeFall_calculator.dir/Menu.cpp.o -c /Users/wesleystagg/Desktop/c++/freefall_calculator/Menu.cpp
 
 CMakeFiles/FreeFall_calculator.dir/Menu.cpp.i: cmake_force
@@ -156,7 +142,6 @@ CMakeFiles/FreeFall_calculator.dir/Menu.cpp.s: cmake_force
 # Object files for target FreeFall_calculator
 FreeFall_calculator_OBJECTS = \
 "CMakeFiles/FreeFall_calculator.dir/main.cpp.o" \
-"CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o" \
 "CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o" \
 "CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o" \
 "CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o" \
@@ -166,7 +151,6 @@ FreeFall_calculator_OBJECTS = \
 FreeFall_calculator_EXTERNAL_OBJECTS =
 
 FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/main.cpp.o
-FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/calculations.cpp.o
 FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/inputs.cpp.o
 FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o
 FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o
@@ -176,7 +160,7 @@ FreeFall_calculator: _deps/sfml-build/lib/libsfml-graphics-d.2.6.0.dylib
 FreeFall_calculator: _deps/sfml-build/lib/libsfml-window-d.2.6.0.dylib
 FreeFall_calculator: _deps/sfml-build/lib/libsfml-system-d.2.6.0.dylib
 FreeFall_calculator: CMakeFiles/FreeFall_calculator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable FreeFall_calculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wesleystagg/Desktop/c++/freefall_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable FreeFall_calculator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FreeFall_calculator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

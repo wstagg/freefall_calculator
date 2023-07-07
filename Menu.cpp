@@ -1,12 +1,11 @@
-#include "Menu.h"
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Event.hpp>
 #include <iostream>
 #include <string>
 #include <vector> 
+
+#include "Menu.h"
 #include "inputs.h"
-#include "calculations.h"
 #include "Freefall_object.h"
 #include "User_input_text.h"
 
@@ -72,11 +71,6 @@ void Menu::init()
     press_space.setString("Push space to continue...");
     press_space.setPosition(320, 700);
 
-    /* User input text */
-    // sf::Text user_text;
-    // user_text.setFont(arial);
-    // sf::String user_input;
-
 ///////////////////////////////////////////////
     /* User input page */
     int next_text_input{ 0 }; // changes input selection
@@ -88,12 +82,6 @@ void Menu::init()
     User_input_text user_input_height{arial, sf::Vector2f(400.f, 0.f), sf::String("|")};
 
     User_input_text user_input_mass{arial, sf::Vector2f(400.f, 300.f), sf::String("")};
-
-    sf::Text input_obj_mass;
-    input_obj_mass.setFont(arial);
-    input_obj_mass.setPosition(400, 300);
-    std::string obj_mass_string;
-
 
 ///////////////////////////////////////////////
     
@@ -134,20 +122,15 @@ void Menu::init()
         std::cout << "Cannot load cloud texture\n";
     }
 
-    /*----------------------*/
-    /* Create freefall objects  */
-    /*----------------------*/
+    /*******************************/
+    /*** Create freefall objects ***/
+    /*******************************/
    
-    Freefall_object menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete, 0.f, 75.f, sf::Vector2f(0.f, 0.f)};
+    Freefall_object menu_ball{ sf::Vector2f(600.f, 300.f), sf::Color::White, concrete ,0.f, 75.f, sf::Vector2f(0.f, 0.f)};
 
-    sf::Vector2f ff_ball_pos(x_middle, 0);
-
-    Freefall_object menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Color::White, crate,10.f, 0.f, sf::Vector2f(150.f, 150.f) };
-    
-    sf::Vector2f ff_cube_pos(x_middle, 0);
+    Freefall_object menu_cube{sf::Vector2f(200.f, 300.f) ,sf::Color::White, crate, 10.f, 0.f, sf::Vector2f(150.f, 150.f) };
 
     std::vector <float> cube_size(60.f, 60.f);
-    float ball_rad{ 30.f };
 
     /*-------------------------*/
     /* Creates menu background */
@@ -180,13 +163,8 @@ void Menu::init()
     sf::Clock mass_input_clock;
     bool obj_mass_input_clock_start{ false };
 
-    //sf::Clock text_cursor_clock;
-    //bool text_cursor_clock_start{ false };
-    //int switch_text_cursor_colour{ 0 };
-
     sf::Clock freefall_clock;
     bool freefall_clock_start{ false };
-
 
     /*---------------------*/
     /*   main event loop   */
@@ -243,23 +221,10 @@ void Menu::init()
                         mass_input_clock.restart();
                         user_input_mass.setFillColor(sf::Color::Green);
                         obj_mass_input_clock_start = true;
-
-                        menu_ball.setPosition(ff_ball_pos);
-                        menu_cube.setPosition(ff_cube_pos);
-
-                        menu_ball.setRadius(ball_rad);
-                        menu_cube.setSize(sf::Vector2f(60,60));
                         
-                        //debug use of calculation functions
-                        fall_time = calculate_free_fall_time(obj_mass, drop_ht);
-                        
-                        //calculate_distance_fallen(drop_ht, fall_time);                       
-                        
-                        fall_velocity = obj_fall_velocity(fall_time, drop_ht, y_res);
+                        menu_ball.get_user_inputs(drop_ht,obj_mass);
+                        menu_cube.get_user_inputs(drop_ht,obj_mass);
 
-                        std::cout << "fall velocity (pix per second) = " << fall_velocity << std::endl;
-                        std::cout << "drop height = " << drop_ht << std::endl;
-                        std::cout << "fall time = " << fall_time << std::endl;
                     }
                 }
                 /* Alows user to backaspace to delete text inputs */
@@ -355,8 +320,7 @@ void Menu::init()
             
         }
         else if (next_display == 3)
-        {
-            
+        {   
             /*************************/
             /****** Time Events ******/
             /*************************/
@@ -371,63 +335,18 @@ void Menu::init()
                 if (obj_seconds_passed > obj_seconds)
                 {                  
                     next_display = 4;
-                    freefall_clock_start = true;
-                    freefall_clock.restart();
                 }
-
             }
             
             user_input_height.text_cursor();  
             user_input_mass.text_cursor();
         }
         else if (next_display == 4)
-        {
-            if (freefall_clock_start == true)
-            {
-                // sf::Time ff_timer = freefall_clock.getElapsedTime();
-                // sf::Time delta_time = sf::seconds(1);
-                // sf::Time total_fall_time = sf::seconds(fall_time);
-                // //static double drop_ht_n1 = drop_ht;
+        {       
+                if(object_chosen == 0) menu_cube.obj_fall_pos(y_res);
+                
+                if(object_chosen == 1) menu_ball.obj_fall_pos(y_res);
 
-                // //std::cout << ff_timer.asSeconds() << std::endl; // debug
-                // //std::cout << object_chosen << std::endl;
-                // if (ff_timer > delta_time)
-                // {
-                //     ff_cube_pos.y += fall_velocity;
-                //     menu_cube.setPosition(ff_cube_pos);
-
-                //     ff_ball_pos.y += fall_velocity;
-                //     menu_ball.setPosition(ff_ball_pos);
-
-                //     float mps = calculate_meters_per_second(drop_ht, fall_time);
-
-                //     drop_ht -= mps ;
-
-                //     freefall_clock.restart();
-
-                //     //std::cout << ff_cube_pos.y<< std::endl;
-                //     if (object_chosen == 0)
-                //     {
-                //         ff_text_pos.y = ff_cube_pos.y;
-                //         freefall_ht_txt.setString(std::to_string(drop_ht));
-                //     }
-                //     if (object_chosen == 1)
-                //     {
-                //         ff_text_pos.y = ff_ball_pos.y;
-                //         freefall_ht_txt.setString(std::to_string(drop_ht));
-                //     }
-
-                //     freefall_ht_txt.setPosition(ff_text_pos);
-                // }
-
-                obj_fall_pos(box, obj_mass, drop_ht, y_res, freefall_clock.getElapsedTime().asMilliseconds()/1000.0);
-                                   
-                if ((ff_ball_pos.y == (y_res - (ball_rad *2))) || (ff_cube_pos.y > (y_res - cube_size[0])))
-                {
-                    freefall_clock_start = false;
-                    //freefall_clock.restart();                  
-                }
-            }       
         }   
         /*******************************/
         
@@ -489,8 +408,8 @@ void Menu::init()
             if (object_chosen == 0)
             {
                 //window.draw(menu_cube);
-                //menu_cube.draw(window);
-                window.draw(box);
+                menu_cube.draw(window);
+                //window.draw(box);
 
             }
             else if (object_chosen == 1)

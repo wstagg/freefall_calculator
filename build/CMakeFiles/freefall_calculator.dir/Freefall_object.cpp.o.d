@@ -808,4 +808,6 @@ CMakeFiles/FreeFall_calculator.dir/Freefall_object.cpp.o: \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/Glsl.inl \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/Sprite.hpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/Text.hpp \
-  /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream
