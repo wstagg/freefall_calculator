@@ -7,6 +7,7 @@ std::string erase_text(std::string &text)
 {
     if (text.length() > 0)
     {
+        std::cout << text.length() << std::endl;
         text = text.erase(text.size() - 1, 1);
     }
     return text;
