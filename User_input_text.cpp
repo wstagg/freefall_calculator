@@ -4,6 +4,8 @@
 #include "SFML/Window/Event.hpp"
 #include <string>
 #include "inputs.h"
+#include <iostream>
+
 
 
 /* Constructor */
@@ -24,7 +26,7 @@ void User_input_text::draw(sf::RenderWindow& window)
 }
 
 /* Takes tyoed user input sets it to the text */
-void User_input_text::get_user_input(sf::Event event)
+void User_input_text::get_user_input(sf::Event event, int next_text)
 {
     if (event.text.unicode >= 48 && event.text.unicode <= 57)
     {
@@ -32,7 +34,17 @@ void User_input_text::get_user_input(sf::Event event)
         text.setFillColor(sf::Color::White);
         input += event.text.unicode;
         text.setString(input); 
+
+        if (next_text == 0)
+        {
+            drop_ht = stod(input);
+        }
+        if (next_text == 1)
+        {
+            obj_mass = stod(input);
+        }
     }
+    
 }
 
 /* Returns the input string */
@@ -65,9 +77,15 @@ void User_input_text::text_cursor()
     }
 }
  /* Erases the input text */
-void User_input_text::erase()
+void User_input_text::erase_text()
 {
-    text.setString(erase_text(input));
+    if (input.length() > 0)
+    {
+        input = input.erase(input.length()-1, 1);
+        std::cout << input.length() << std::endl;
+        text.setString(input);
+    }
+
 }
 
 void User_input_text::start_text_cursor_clock()
@@ -95,3 +113,14 @@ int User_input_text::return_string_Lenght()
     return input.length();
 }
 
+double User_input_text::return_drop_ht()
+{
+    std::cout << "User_input_text::return_drop_ht: " << drop_ht << std::endl;
+    return drop_ht;
+}
+
+double User_input_text::return_obj_mass()
+{
+    std::cout << "User_input_text::return_obj_mass: " << obj_mass << std::endl;
+    return obj_mass;
+}

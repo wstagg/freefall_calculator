@@ -96,7 +96,10 @@ void Freefall_object::menu_drop(float y_res, int &next_display)
 void Freefall_object::get_user_inputs(double drop_ht, double object_mass)
 {
     in_drop_ht = drop_ht;
+    std::cout << "drop height is: "<< in_drop_ht << std::endl;
     in_obj_mass = object_mass;
+    std::cout << "obj mass is: " << in_obj_mass << std::endl;
+
 }
 
 void Freefall_object::object_freefall()
@@ -201,7 +204,7 @@ void Freefall_object::obj_fall_pos(double screen_ht)
     {
         fall_time = 0;                
     }   
-    std::cout << fall_time << std::endl;
+    //std::cout << fall_time << std::endl;
 
     // std::cout << "MaxFallTime: " << maxFallTime << std::endl;
     // std::cout << "MaxDistance: " << maxDistance << std::endl;

@@ -809,4 +809,6 @@ CMakeFiles/FreeFall_calculator.dir/User_input_text.cpp.o: \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/Sprite.hpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/Text.hpp \
   /Users/wesleystagg/Desktop/c++/freefall_calculator/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.h
+  /Users/wesleystagg/Desktop/c++/freefall_calculator/inputs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream

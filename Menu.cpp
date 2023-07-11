@@ -148,14 +148,8 @@ void Menu::init()
     /*   Main Objects      */
     /*---------------------*/
     static int object_chosen {0};
-    double drop_ht {}; // drop ht for maths
-    double obj_mass{}; // object mass for maths
-
-    double fall_velocity{};
-    double rel_screen_drop_ht{};
-    double fall_time{};
-
-    //const float time_delta{ 0.5 };
+    // double drop_ht {}; // drop ht for maths
+    // double obj_mass{}; // object mass for maths
 
     /*--------------------*/
     /*   Time Objects     */
@@ -221,10 +215,14 @@ void Menu::init()
                         mass_input_clock.restart();
                         user_input_mass.setFillColor(sf::Color::Green);
                         obj_mass_input_clock_start = true;
-                        
-                        menu_ball.get_user_inputs(drop_ht,obj_mass);
-                        menu_cube.get_user_inputs(drop_ht,obj_mass);
-
+                        if(object_chosen == 0)
+                        {
+                            menu_cube.get_user_inputs(user_input_height.return_drop_ht(), user_input_mass.return_obj_mass());
+                        }
+                        if(object_chosen == 1)
+                        {
+                            menu_ball.get_user_inputs(user_input_height.return_drop_ht(), user_input_mass.return_obj_mass());
+                        }
                     }
                 }
                 /* Alows user to backaspace to delete text inputs */
@@ -232,11 +230,11 @@ void Menu::init()
                 {
                     if (next_text_input == 0)
                     { 
-                        user_input_height.erase();                     
+                        user_input_height.erase_text();                     
                     }
                     else if (next_text_input == 1)
                     {
-                        user_input_mass.erase();
+                        user_input_mass.erase_text();
                     }
                 }
                 if (event.key.code == sf::Keyboard::Right)
@@ -268,17 +266,11 @@ void Menu::init()
             {
                 if (next_text_input == 0)
                 {
-                    
-                    user_input_height.get_user_input(event);
-                    drop_ht = std::stod(user_input_height.return_string());                       
-                    
+                    user_input_height.get_user_input(event, next_text_input);                         
                 }
                 else if (next_text_input == 1)
                 {
-                    
-                    user_input_mass.get_user_input(event);
-                    obj_mass = std::stod(user_input_height.return_string());                       
-                    
+                    user_input_mass.get_user_input(event, next_text_input);                       
                 }
             }
         }
